@@ -18,16 +18,16 @@ def send_command(command: bytes):
     response = ser.read_all()
     print(f"Response: {response}")
 
-def go_home(self):
+def go_home():
     send_command(b'\x01ho')
 
-def turn_fw(self):
+def turn_fw():
     send_command(b'\x01fw')
 
-def turn_bw(self):
+def turn_bw():
     send_command(b'\x01bw')
 
-    
+
 # Close port after use
 ser.close()
 
